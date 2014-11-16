@@ -5,22 +5,24 @@
 	<script src ="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
 <script type="text/javascript">
-$(document).ready(function() {
-	console.log('doc ready');
-}
+	$(document).ready(function() {
+		console.log('doc ready');
 
-var search_term = {
-	q: 'bowery'
-};
+		$('#submit').click(function() {
 
-console.dir(search_term);
+			var search_term = {
+				q: 'bowery'
+			};
+			console.dir(search_term);
 
+		});
 
-function search (search_term) {
-	console.log('searching for ');
-	console.dir(search_term);
+	});
 
-}
+		function search(search_term) {
+			console.log('searching for ');
+			console.dir(search_term);
+		}
 
 </script>
 </head>
