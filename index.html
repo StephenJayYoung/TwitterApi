@@ -13,7 +13,7 @@
 			var search_term = {
 				q: 'bowery'
 			};
-			console.dir(search_term);
+			search(search_term);
 
 		});
 
@@ -22,6 +22,19 @@
 		function search(search_term) {
 			console.log('searching for ');
 			console.dir(search_term);
+
+
+			$.ajax({
+				url: 'https://api.twitter.com/1.1/search/tweets.json?' + $.param(search_term),
+				dataType: 'jsonp',
+				success: function(date) {
+					console.dir(data);
+				}
+			
+
+			});
+
+
 		}
 
 </script>
