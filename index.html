@@ -25,9 +25,9 @@
 
 
 			$.ajax({
-				url: 'https://api.twitter.com/1.1/search/tweets.json?' + $.param(search_term),
+				url: 'https://api.twitter.com/1.1/search/tweets.json' + $.param(search_term),
 				dataType: 'jsonp',
-				success: function(date) {
+				success: function(data) {
 					console.dir(data);
 				}
 			
