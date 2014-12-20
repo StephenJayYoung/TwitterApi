@@ -20,6 +20,7 @@
     <!-- Custom Fonts -->
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
 <!-- This is for the confetti -->
 <canvas id="canvas"></canvas>
 
@@ -75,8 +76,8 @@
 
 
             $.ajax({
-                url: 'https://api.twitter.com/1.1/search/tweets.json' + $.param(search_term),
-                dataType: 'jsonp',
+                url: 'https://api.twitter.com/1.1/search/tweets.json&count=5' + $.param(search_term),
+                dataType: 'json',
                 success: function(data) {
                     console.dir(data);
                 }
